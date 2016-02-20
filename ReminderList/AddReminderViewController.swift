@@ -15,6 +15,7 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
     @IBOutlet weak var itemTitle: UITextField!
     @IBOutlet weak var itemDescription: UITextField!
     @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var colorPicker: ColorPicker!
 
     let imageNames: Array<String> = ["alarm-clock", "announce", "book", "briefcase", "date", "group", "home", "picture", "shopping-bag", "star", "addon"]
     var imageSet: Array<UIImage> = Array<UIImage>()
@@ -29,6 +30,7 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
 
         loadImagesIntoArray()
         iconView.image = imageSet[currentImageIndex]
+        colorPicker.setTarget(iconView)
     }
 
 

@@ -12,19 +12,21 @@ class ColorPicker: UIView {
 
     var currentValue = 0
     var colorButtons = Array<UIButton>()
+    var colorTarget: UIView?
     let colorsArray = Array<UIColor>([.redColor(), .orangeColor(), .yellowColor(), .greenColor(), .cyanColor(), .blueColor(), .purpleColor(), .magentaColor()])
+
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
         // Create color picker buttons
         for idx in 0..<8 {
-            let button: UIButton = UIButton(frame:  CGRect(x: 0, y: 0, width: 16, height: 16))
-            button.backgroundColor = colorsArray[idx]
-            button.alpha = 0.3
-            button.addTarget(self, action: "buttonTapped:", forControlEvents: .TouchDown)
-            colorButtons.append(button)
-            addSubview(button)
+            let newButton: UIButton = UIButton(frame:  CGRect(x: 0, y: 0, width: 16, height: 16))
+            newButton.backgroundColor = colorsArray[idx]
+            newButton.alpha = 0.3
+            newButton.addTarget(self, action: "buttonTapped:", forControlEvents: .TouchDown)
+            colorButtons.append(newButton)
+            addSubview(newButton)
         }
     }
 
@@ -44,7 +46,15 @@ class ColorPicker: UIView {
     }
 
     func buttonTapped(button: UIButton) {
-        NSLog("Button pressed!")
+        guard let target = colorTarget else {
+            NSLog("No coloring target assigned!")
+            return
+        }
+        target.tintColor = button.backgroundColor
+    }
+
+    func setTarget(target: UIView) {
+        self.colorTarget = target
     }
 
 }

@@ -88,6 +88,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="colorPicker" destination="Rbr-kX-b4w" id="mbh-H0-N9X"/>
                         <outlet property="iconView" destination="Utm-i9-eFH" id="y6L-wj-k7s"/>
                         <outlet property="itemDescription" destination="T33-QM-7Dl" id="Vxd-at-wlS"/>
                         <outlet property="itemTitle" destination="96C-bh-0Bv" id="Idm-wY-qIO"/>
