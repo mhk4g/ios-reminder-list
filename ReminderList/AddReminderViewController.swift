@@ -47,16 +47,22 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
     }
 
 
-
-    // MARK: UIImagePickerControllerDelegate
-
-
     // MARK: Actions
 
     @IBAction func getNextIcon(sender: UITapGestureRecognizer) {
+
         // Make sure keyboard is hidden
         itemTitle.resignFirstResponder()
         itemDescription.resignFirstResponder()
+
+        if currentImageIndex >= imageSet.count - 1 {
+            currentImageIndex = 0
+        } else {
+            currentImageIndex++
+        }
+
+        iconView.image = imageSet[currentImageIndex]
+        iconView.tintColor = UIColor.redColor()
     }
 
     @IBAction func createButtonClicked(sender: UIButton) {
@@ -66,18 +72,16 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
 
     // MARK: Image loader
 
-    func loadImagesIntoArray() -> Bool {
+    func loadImagesIntoArray() {
 
-        let paths = NSBundle.mainBundle().pathsForResourcesOfType("png", inDirectory: "Assets")
-
-        NSLog("Starting")
-
-        for path in paths {
-            NSLog("\(path)")
-
+        for imageName in imageNames {
+            if let image = UIImage(named: imageName) {
+                imageSet.append(image)
+                NSLog("Image loaded: \(imageName)")
+            } else {
+                NSLog("Image not found: \(imageName)")
+            }
         }
-
-        return true
     }
 
 
