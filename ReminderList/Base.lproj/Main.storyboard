@@ -46,6 +46,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYm-DY-4Cd">
                                         <rect key="frame" x="0.0" y="149" width="560" height="30"/>
                                         <state key="normal" title="Create"/>
+                                        <connections>
+                                            <action selector="createButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEW-ba-hB0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -56,15 +59,24 @@
                                     <constraint firstItem="96C-bh-0Bv" firstAttribute="leading" secondItem="nUY-Uc-tYa" secondAttribute="leading" id="zxI-uL-gDn"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXt-YF-5w8">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nUY-Uc-tYa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="1J1-dx-lyI"/>
                             <constraint firstItem="nUY-Uc-tYa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6sG-rU-vEz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nUY-Uc-tYa" secondAttribute="trailing" id="8Y3-QX-LH9"/>
+                            <constraint firstItem="oXt-YF-5w8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I3X-xV-TI0"/>
+                            <constraint firstItem="oXt-YF-5w8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ehg-bx-Ham"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="exampleLabel" destination="oXt-YF-5w8" id="wwa-RO-CTI"/>
                         <outlet property="itemTitle" destination="96C-bh-0Bv" id="Idm-wY-qIO"/>
                     </connections>
                 </viewController>
