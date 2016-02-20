@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EC35A96E1C78EE19002CC828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35A96D1C78EE19002CC828 /* AppDelegate.swift */; };
-		EC35A9701C78EE19002CC828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35A96F1C78EE19002CC828 /* ViewController.swift */; };
+		EC35A9701C78EE19002CC828 /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35A96F1C78EE19002CC828 /* AddReminderViewController.swift */; };
 		EC35A9731C78EE19002CC828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC35A9711C78EE19002CC828 /* Main.storyboard */; };
 		EC35A9751C78EE19002CC828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC35A9741C78EE19002CC828 /* Assets.xcassets */; };
 		EC35A9781C78EE19002CC828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC35A9761C78EE19002CC828 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		EC35A96A1C78EE19002CC828 /* ReminderList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReminderList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC35A96D1C78EE19002CC828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EC35A96F1C78EE19002CC828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC35A96F1C78EE19002CC828 /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
 		EC35A9721C78EE19002CC828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC35A9741C78EE19002CC828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC35A9771C78EE19002CC828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				EC35A96D1C78EE19002CC828 /* AppDelegate.swift */,
-				EC35A96F1C78EE19002CC828 /* ViewController.swift */,
+				EC35A96F1C78EE19002CC828 /* AddReminderViewController.swift */,
 				EC35A9711C78EE19002CC828 /* Main.storyboard */,
 				EC35A9741C78EE19002CC828 /* Assets.xcassets */,
 				EC35A9761C78EE19002CC828 /* LaunchScreen.storyboard */,
@@ -197,7 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC35A9701C78EE19002CC828 /* ViewController.swift in Sources */,
+				EC35A9701C78EE19002CC828 /* AddReminderViewController.swift in Sources */,
 				EC35A96E1C78EE19002CC828 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

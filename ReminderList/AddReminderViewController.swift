@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class AddReminderViewController: UIViewController {
 
     @IBOutlet weak var itemTitle: UITextField!
     @IBOutlet weak var itemDescription: UITextField!
