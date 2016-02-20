@@ -10,6 +10,8 @@ import UIKit
 
 class ColorPicker: UIView {
 
+    let buttonSize = 16
+    let buttonY = 24
     var currentValue = 0
     var colorButtons = Array<UIButton>()
     var colorTarget: UIView?
@@ -21,7 +23,7 @@ class ColorPicker: UIView {
 
         // Create color picker buttons
         for idx in 0..<8 {
-            let newButton: UIButton = UIButton(frame:  CGRect(x: 0, y: 0, width: 16, height: 16))
+            let newButton: UIButton = UIButton(frame:  CGRect(x: 0, y: 0, width: buttonSize, height: buttonSize))
             newButton.backgroundColor = colorsArray[idx]
             newButton.alpha = 0.3
             newButton.addTarget(self, action: "buttonTapped:", forControlEvents: .TouchDown)
@@ -32,7 +34,7 @@ class ColorPicker: UIView {
 
     // Defines how the class should layout our color buttons
     override func layoutSubviews() {
-        var buttonFrame: CGRect = CGRect(x: 0, y: 24, width:16, height: 16)
+        var buttonFrame: CGRect = CGRect(x: 0, y: buttonY, width:buttonSize, height: buttonSize)
 
         // Layout each button's location according to its index
         for (index, button) in colorButtons.enumerate() {
