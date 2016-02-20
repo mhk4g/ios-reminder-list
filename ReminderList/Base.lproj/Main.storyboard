@@ -52,7 +52,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYm-DY-4Cd">
-                                <rect key="frame" x="265" y="476" width="71" height="30"/>
+                                <rect key="frame" x="265" y="507" width="71" height="30"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="createButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEW-ba-hB0"/>
@@ -70,6 +70,10 @@
                                     <outletCollection property="gestureRecognizers" destination="bPa-qj-9yi" appends="YES" id="Dfl-ML-IbZ"/>
                                 </connections>
                             </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="256" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-kX-b4w" userLabel="ColorPicker" customClass="ColorPicker" customModule="ReminderList" customModuleProvider="target">
+                                <rect key="frame" x="172" y="435" width="256" height="64"/>
+                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="0.41999999999999998" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -77,6 +81,8 @@
                             <constraint firstItem="Utm-i9-eFH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Zx-ms-1Tr"/>
                             <constraint firstItem="nUY-Uc-tYa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6sG-rU-vEz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nUY-Uc-tYa" secondAttribute="trailing" id="8Y3-QX-LH9"/>
+                            <constraint firstItem="Rbr-kX-b4w" firstAttribute="top" secondItem="Utm-i9-eFH" secondAttribute="bottom" constant="32" id="AMY-Id-HjZ"/>
+                            <constraint firstItem="Rbr-kX-b4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qt4-a7-WQt"/>
                             <constraint firstItem="Utm-i9-eFH" firstAttribute="top" secondItem="nUY-Uc-tYa" secondAttribute="bottom" constant="50" id="aOr-VJ-6Az"/>
                             <constraint firstItem="QYm-DY-4Cd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tmS-7R-wu8"/>
                         </constraints>

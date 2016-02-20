@@ -13,6 +13,7 @@
 		EC35A9751C78EE19002CC828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC35A9741C78EE19002CC828 /* Assets.xcassets */; };
 		EC35A9781C78EE19002CC828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC35A9761C78EE19002CC828 /* LaunchScreen.storyboard */; };
 		EC35A9831C78EE19002CC828 /* ReminderListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35A9821C78EE19002CC828 /* ReminderListTests.swift */; };
+		EC7B01321C791AB700336FF3 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B01311C791AB700336FF3 /* ColorPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EC35A97E1C78EE19002CC828 /* ReminderListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReminderListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC35A9821C78EE19002CC828 /* ReminderListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListTests.swift; sourceTree = "<group>"; };
 		EC35A9841C78EE19002CC828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC7B01311C791AB700336FF3 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				EC35A96D1C78EE19002CC828 /* AppDelegate.swift */,
 				EC35A96F1C78EE19002CC828 /* AddReminderViewController.swift */,
+				EC7B01311C791AB700336FF3 /* ColorPicker.swift */,
 				EC35A9711C78EE19002CC828 /* Main.storyboard */,
 				EC35A9741C78EE19002CC828 /* Assets.xcassets */,
 				EC35A9761C78EE19002CC828 /* LaunchScreen.storyboard */,
@@ -199,6 +202,7 @@
 			files = (
 				EC35A9701C78EE19002CC828 /* AddReminderViewController.swift in Sources */,
 				EC35A96E1C78EE19002CC828 /* AppDelegate.swift in Sources */,
+				EC7B01321C791AB700336FF3 /* ColorPicker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
