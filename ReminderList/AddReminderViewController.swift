@@ -8,14 +8,17 @@
 
 import UIKit
 
-class AddReminderViewController: UIViewController, UITextFieldDelegate {
+class AddReminderViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
 
     // MARK: Properties
 
     @IBOutlet weak var itemTitle: UITextField!
     @IBOutlet weak var itemDescription: UITextField!
-    @IBOutlet weak var exampleLabel: UILabel!
-    var timesClicked: Int = 0
+    @IBOutlet weak var iconView: UIImageView!
+
+    let imageNames: Array<String> = ["alarm-clock", "announce", "book", "briefcase", "date", "group", "home", "picture", "shopping-bag", "star", "addon"]
+    var imageSet: Array<UIImage> = Array<UIImage>()
+    var currentImageIndex = 0;
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +26,14 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate {
         // Assign the view controller as the delegate for both text fields
         itemTitle.delegate = self
         itemDescription.delegate = self
+
+        loadImagesIntoArray()
+
     }
 
+
     // MARK: UITextFieldDelegate
+
 
     // Called first: hide the keyboard
     func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -39,11 +47,37 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate {
     }
 
 
+
+    // MARK: UIImagePickerControllerDelegate
+
+
     // MARK: Actions
 
+    @IBAction func getNextIcon(sender: UITapGestureRecognizer) {
+        // Make sure keyboard is hidden
+        itemTitle.resignFirstResponder()
+        itemDescription.resignFirstResponder()
+    }
+
     @IBAction func createButtonClicked(sender: UIButton) {
-        timesClicked++
-        exampleLabel.text = "Button clicked: \(timesClicked)"
+        // Code will go here
+    }
+
+
+    // MARK: Image loader
+
+    func loadImagesIntoArray() -> Bool {
+
+        let paths = NSBundle.mainBundle().pathsForResourcesOfType("png", inDirectory: "Assets")
+
+        NSLog("Starting")
+
+        for path in paths {
+            NSLog("\(path)")
+
+        }
+
+        return true
     }
 
 

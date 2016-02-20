@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,13 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uc-tYa">
-                                <rect key="frame" x="20" y="90" width="560" height="319"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uc-tYa">
+                                <rect key="frame" x="20" y="90" width="560" height="137"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-cg-3uU">
                                         <rect key="frame" x="0.0" y="0.0" width="32" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your reminder title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96C-bh-0Bv">
@@ -36,7 +35,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZV-Zk-lHP">
                                         <rect key="frame" x="0.0" y="74" width="88" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T33-QM-7Dl">
@@ -44,53 +43,61 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-i9-eFH">
-                                        <rect key="frame" x="0.0" y="149" width="128" height="128"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Utm-i9-eFH" secondAttribute="height" multiplier="1:1" id="gDy-0y-Z3D"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYm-DY-4Cd">
-                                        <rect key="frame" x="0.0" y="289" width="560" height="30"/>
-                                        <state key="normal" title="Create"/>
-                                        <connections>
-                                            <action selector="createButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEW-ba-hB0"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="T33-QM-7Dl" secondAttribute="trailing" id="19Y-mE-3gc"/>
                                     <constraint firstItem="T33-QM-7Dl" firstAttribute="leading" secondItem="nUY-Uc-tYa" secondAttribute="leading" id="SFg-O3-wU7"/>
                                     <constraint firstAttribute="trailing" secondItem="96C-bh-0Bv" secondAttribute="trailing" id="kgD-Cz-YJY"/>
-                                    <constraint firstItem="QYm-DY-4Cd" firstAttribute="centerX" secondItem="nUY-Uc-tYa" secondAttribute="centerX" id="wWF-bG-jYw"/>
                                     <constraint firstItem="96C-bh-0Bv" firstAttribute="leading" secondItem="nUY-Uc-tYa" secondAttribute="leading" id="zxI-uL-gDn"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXt-YF-5w8">
-                                <rect key="frame" x="279" y="289" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYm-DY-4Cd">
+                                <rect key="frame" x="265" y="476" width="71" height="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEW-ba-hB0"/>
+                                </connections>
+                            </button>
+                            <imageView alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="alarm-clock" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-i9-eFH">
+                                <rect key="frame" x="236" y="291" width="128" height="128"/>
+                                <color key="tintColor" red="0.72863850740332148" green="0.54103931175562792" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8SL-dn-pIL"/>
+                                    <constraint firstAttribute="width" constant="128" id="SRT-cr-aAd"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bPa-qj-9yi" appends="YES" id="Dfl-ML-IbZ"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nUY-Uc-tYa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="1J1-dx-lyI"/>
+                            <constraint firstItem="Utm-i9-eFH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Zx-ms-1Tr"/>
                             <constraint firstItem="nUY-Uc-tYa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6sG-rU-vEz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nUY-Uc-tYa" secondAttribute="trailing" id="8Y3-QX-LH9"/>
-                            <constraint firstItem="oXt-YF-5w8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="I3X-xV-TI0"/>
-                            <constraint firstItem="oXt-YF-5w8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ehg-bx-Ham"/>
+                            <constraint firstItem="Utm-i9-eFH" firstAttribute="top" secondItem="nUY-Uc-tYa" secondAttribute="bottom" constant="50" id="aOr-VJ-6Az"/>
+                            <constraint firstItem="QYm-DY-4Cd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tmS-7R-wu8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="exampleLabel" destination="oXt-YF-5w8" id="wwa-RO-CTI"/>
+                        <outlet property="iconView" destination="Utm-i9-eFH" id="y6L-wj-k7s"/>
                         <outlet property="itemDescription" destination="T33-QM-7Dl" id="Vxd-at-wlS"/>
                         <outlet property="itemTitle" destination="96C-bh-0Bv" id="Idm-wY-qIO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bPa-qj-9yi">
+                    <connections>
+                        <action selector="getNextIcon:" destination="BYZ-38-t0r" id="0Vp-ss-adG"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="305" y="349"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="alarm-clock" width="512" height="512"/>
+    </resources>
 </document>
