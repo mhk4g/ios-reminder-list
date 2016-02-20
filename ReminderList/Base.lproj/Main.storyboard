@@ -72,7 +72,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="256" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-kX-b4w" userLabel="ColorPicker" customClass="ColorPicker" customModule="ReminderList" customModuleProvider="target">
                                 <rect key="frame" x="172" y="435" width="256" height="64"/>
-                                <color key="backgroundColor" red="0.40000000596046448" green="1" blue="0.80000001192092896" alpha="0.41999999999999998" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

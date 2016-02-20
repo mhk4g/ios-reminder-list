@@ -12,14 +12,16 @@ class ColorPicker: UIView {
 
     var currentValue = 0
     var colorButtons = Array<UIButton>()
+    let colorsArray = Array<UIColor>([.redColor(), .orangeColor(), .yellowColor(), .greenColor(), .cyanColor(), .blueColor(), .purpleColor(), .magentaColor()])
 
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
         // Create color picker buttons
-        for _ in 0..<8 {
+        for idx in 0..<8 {
             let button: UIButton = UIButton(frame:  CGRect(x: 0, y: 0, width: 16, height: 16))
-            button.backgroundColor = UIColor.redColor()
+            button.backgroundColor = colorsArray[idx]
+            button.alpha = 0.3
             button.addTarget(self, action: "buttonTapped:", forControlEvents: .TouchDown)
             colorButtons.append(button)
             addSubview(button)
