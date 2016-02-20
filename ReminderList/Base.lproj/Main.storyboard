@@ -58,9 +58,9 @@
                                     <action selector="createButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEW-ba-hB0"/>
                                 </connections>
                             </button>
-                            <imageView alpha="0.25" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="alarm-clock" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-i9-eFH">
+                            <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-i9-eFH">
                                 <rect key="frame" x="236" y="291" width="128" height="128"/>
-                                <color key="tintColor" red="0.72863850740332148" green="0.54103931175562792" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="8SL-dn-pIL"/>
@@ -97,7 +97,4 @@
             <point key="canvasLocation" x="305" y="349"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="alarm-clock" width="512" height="512"/>
-    </resources>
 </document>

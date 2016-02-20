@@ -28,7 +28,7 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
         itemDescription.delegate = self
 
         loadImagesIntoArray()
-
+        iconView.image = imageSet[currentImageIndex]
     }
 
 
@@ -62,7 +62,6 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
         }
 
         iconView.image = imageSet[currentImageIndex]
-        iconView.tintColor = UIColor.redColor()
     }
 
     @IBAction func createButtonClicked(sender: UIButton) {

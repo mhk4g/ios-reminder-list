@@ -388,6 +388,7 @@
 				EC35A9891C78EE19002CC828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC35A98A1C78EE19002CC828 /* Build configuration list for PBXNativeTarget "ReminderListTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +397,7 @@
 				EC35A98C1C78EE19002CC828 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
