@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,8 +19,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uc-tYa">
-                                <rect key="frame" x="20" y="90" width="560" height="179"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uc-tYa">
+                                <rect key="frame" x="20" y="90" width="560" height="319"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-cg-3uU">
                                         <rect key="frame" x="0.0" y="0.0" width="32" height="20"/>
@@ -43,8 +44,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYm-DY-4Cd">
-                                        <rect key="frame" x="0.0" y="149" width="560" height="30"/>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-i9-eFH">
+                                        <rect key="frame" x="0.0" y="149" width="128" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Utm-i9-eFH" secondAttribute="height" multiplier="1:1" id="gDy-0y-Z3D"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYm-DY-4Cd">
+                                        <rect key="frame" x="0.0" y="289" width="560" height="30"/>
                                         <state key="normal" title="Create"/>
                                         <connections>
                                             <action selector="createButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XEW-ba-hB0"/>
@@ -77,6 +84,7 @@
                     </view>
                     <connections>
                         <outlet property="exampleLabel" destination="oXt-YF-5w8" id="wwa-RO-CTI"/>
+                        <outlet property="itemDescription" destination="T33-QM-7Dl" id="Vxd-at-wlS"/>
                         <outlet property="itemTitle" destination="96C-bh-0Bv" id="Idm-wY-qIO"/>
                     </connections>
                 </viewController>
