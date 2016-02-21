@@ -10,6 +10,12 @@ import UIKit
 
 class ReminderTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var checkButton: UIButton!
+    // MARK: PROPERTIES
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
