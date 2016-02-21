@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Reminder Table View Controller-->
+        <!--My Reminders-->
         <scene sceneID="Bfs-ZO-6d8">
             <objects>
                 <tableViewController id="LKj-ft-N1G" customClass="ReminderTableViewController" customModule="ReminderList" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,7 +37,7 @@
                                             <state key="normal" title="✅"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQz-E9-lYZ">
-                                            <rect key="frame" x="42" y="22" width="504" height="20"/>
+                                            <rect key="frame" x="42" y="22" width="504" height="22.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
@@ -57,13 +57,19 @@
                             <outlet property="delegate" destination="LKj-ft-N1G" id="GUP-hW-hBm"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="8nu-G1-PmH"/>
+                    <navigationItem key="navigationItem" title="My Reminders" id="8nu-G1-PmH">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ob5-IE-MT4">
+                            <connections>
+                                <segue destination="GmF-4r-07R" kind="presentation" identifier="AddItem" id="kdu-zL-ytk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gpa-Yj-sfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="394" y="349"/>
         </scene>
-        <!--Add Reminder View Controller-->
+        <!--New Reminder-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="AddReminderViewController" customModule="ReminderList" customModuleProvider="target" sceneMemberID="viewController">
@@ -76,28 +82,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uc-tYa">
-                                <rect key="frame" x="20" y="90" width="560" height="137"/>
+                                <rect key="frame" x="20" y="94" width="560" height="130"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-cg-3uU">
-                                        <rect key="frame" x="0.0" y="0.0" width="32" height="20"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your reminder title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96C-bh-0Bv">
-                                        <rect key="frame" x="0.0" y="32" width="560" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="29" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZV-Zk-lHP">
-                                        <rect key="frame" x="0.0" y="74" width="88" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="71" width="78" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T33-QM-7Dl">
-                                        <rect key="frame" x="0.0" y="107" width="560" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <rect key="frame" x="0.0" y="100" width="560" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
@@ -134,7 +140,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nUY-Uc-tYa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="70" id="1J1-dx-lyI"/>
+                            <constraint firstItem="nUY-Uc-tYa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="1J1-dx-lyI"/>
                             <constraint firstItem="Utm-i9-eFH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Zx-ms-1Tr"/>
                             <constraint firstItem="nUY-Uc-tYa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6sG-rU-vEz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nUY-Uc-tYa" secondAttribute="trailing" id="8Y3-QX-LH9"/>
@@ -144,21 +150,31 @@
                             <constraint firstItem="QYm-DY-4Cd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tmS-7R-wu8"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New Reminder" id="awT-dU-S5G">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Oa6-zp-OB4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="3bo-RI-2fs">
+                            <connections>
+                                <segue destination="mil-Bf-41V" kind="unwind" unwindAction="unwindToReminderList:" id="FDd-bd-OZH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="colorPicker" destination="Rbr-kX-b4w" id="mbh-H0-N9X"/>
                         <outlet property="iconView" destination="Utm-i9-eFH" id="y6L-wj-k7s"/>
                         <outlet property="itemDescription" destination="T33-QM-7Dl" id="Vxd-at-wlS"/>
                         <outlet property="itemTitle" destination="96C-bh-0Bv" id="Idm-wY-qIO"/>
+                        <outlet property="saveButton" destination="3bo-RI-2fs" id="77w-hu-nyb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="mil-Bf-41V" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="bPa-qj-9yi">
                     <connections>
                         <action selector="getNextIcon:" destination="BYZ-38-t0r" id="0Vp-ss-adG"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1117" y="349"/>
+            <point key="canvasLocation" x="1929" y="349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2XK-5x-Lcc">
@@ -177,6 +193,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Twz-ep-FYy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-418" y="349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zr2-hB-jeg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GmF-4r-07R" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ov-Kg-bj6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="j8q-eP-mRj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFH-N2-dZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="349"/>
         </scene>
     </scenes>
 </document>

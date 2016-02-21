@@ -68,6 +68,23 @@ class ReminderTableViewController: UITableViewController {
         return cell
     }
 
+    @IBAction func unwindToReminderList(sender: UIStoryboardSegue) {
+
+        // If we just arrived at this VC from the "AddReminderViewController" and it has a current value set to its newReminderItem...
+        if let sourceViewController = sender.sourceViewController as? AddReminderViewController, reminder = sourceViewController.newReminderItem {
+
+            // Get ready to add the new reminder to array
+            let newIndexPath = NSIndexPath(forRow: reminders.count, inSection: 0)
+
+            // Add the new reminder to the array
+            reminders.append(reminder)
+
+            // Add the new row at the newly calculated index
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+
+    }
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

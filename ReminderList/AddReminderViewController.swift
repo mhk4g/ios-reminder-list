@@ -16,6 +16,9 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
     @IBOutlet weak var itemDescription: UITextField!
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var colorPicker: ColorPicker!
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+
+    var newReminderItem: ReminderItem?
 
     let imageNames: Array<String> = ["alarm-clock", "announce", "book", "briefcase", "date", "group", "home", "picture", "shopping-bag", "star", "addon"]
     var imageSet: Array<UIImage> = Array<UIImage>()
@@ -24,12 +27,20 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Resets default image to clock icon
+        currentImageIndex = 0
+
         // Assign the view controller as the delegate for both text fields
         itemTitle.delegate = self
         itemDescription.delegate = self
 
+        // Load the images for image selector
         loadImagesIntoArray()
+
+        // Load the initial image from the
         iconView.image = imageSet[currentImageIndex]
+
+        // Sets the icon as the target of the color picker
         colorPicker.setTarget(iconView)
     }
 
@@ -46,6 +57,20 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
     // Called second: process the input
     func textFieldDidEndEditing(textField: UITextField) {
         NSLog("The user entered input.")
+    }
+
+    // MARK: Navigation
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if sender === saveButton {
+            let title = itemTitle.text ?? "Reminder"
+            let description = itemDescription.text ?? "Whatever it is, you'd better do it"
+            let color = iconView.tintColor ?? UIColor.grayColor()
+            let icon = iconView.image ?? UIImage(named: "alarm-clock")!
+
+            newReminderItem = ReminderItem(image: icon, color: color, title: title, description: description)
+
+        }
     }
 
 
