@@ -61,8 +61,8 @@ class ReminderTableViewController: UITableViewController {
 
         cell.titleLabel.text = reminder.title
         cell.descriptionLabel.text = reminder.description
-        cell.iconImageView = UIImageView(image: reminder.image)
-        cell.iconImageView.backgroundColor = reminder.color
+        cell.iconImageView.image = reminder.image
+        cell.iconImageView.tintColor = reminder.color
         cell.iconImageView.alpha = iconAlpha
 
         return cell
