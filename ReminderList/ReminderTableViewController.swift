@@ -10,42 +10,63 @@ import UIKit
 
 class ReminderTableViewController: UITableViewController {
 
+    // MARK: Properties
+
+    let iconAlpha: CGFloat = 0.3
+    var reminders = Array<ReminderItem>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        loadSampleReminders()
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+
+    func loadSampleReminders() {
+        let icon1 = UIImage(named: "alarm-clock")!
+        let item1 = ReminderItem(image: icon1, color: UIColor.redColor(), title: "Buy a clock", description: "Go to the store and buy yourself a damn clock")!
+
+        let icon2 = UIImage(named: "book")!
+        let item2 = ReminderItem(image: icon2, color: UIColor.orangeColor(), title: "Read book", description: "War and Peace isn't going to read itself")!
+
+        let icon3 = UIImage(named: "group")!
+        let item3: ReminderItem = ReminderItem(image: icon3, color: UIColor.magentaColor(), title: "Make a friend", description: "Too much computers. Go make some friends for chrissake")!
+
+        reminders.append(item1)
+        reminders.append(item2)
+        reminders.append(item3)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
+    // Only one section of rows
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
+    // Display number of rows equal to the number of reminders in the array
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return reminders.count
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cellIdentifier = "ReminderTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ReminderTableViewCell
 
-        // Configure the cell...
+        let reminder = reminders[indexPath.row]
+
+        cell.titleLabel.text = reminder.title
+        cell.descriptionLabel.text = reminder.description
+        cell.iconImageView = UIImageView(image: reminder.image)
+        cell.iconImageView.backgroundColor = reminder.color
+        cell.iconImageView.alpha = iconAlpha
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

@@ -12,13 +12,15 @@ import UIKit
 public class ReminderItem {
 
     let image: UIImage
+    let color: UIColor
     let title: String
     let description: String
     var active: Bool = true
 
-    init?(image: UIImage, title: String, description: String) {
+    init?(image: UIImage, color: UIColor, title: String, description: String) {
 
         self.image = image
+        self.color = color
         self.title = title
         self.description = description
 

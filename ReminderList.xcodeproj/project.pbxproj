@@ -85,16 +85,16 @@
 		EC35A96C1C78EE19002CC828 /* ReminderList */ = {
 			isa = PBXGroup;
 			children = (
+				EC35A9741C78EE19002CC828 /* Assets.xcassets */,
 				EC35A96D1C78EE19002CC828 /* AppDelegate.swift */,
 				EC35A96F1C78EE19002CC828 /* AddReminderViewController.swift */,
 				EC7B01311C791AB700336FF3 /* ColorPicker.swift */,
 				EC35A9711C78EE19002CC828 /* Main.storyboard */,
-				EC2527D41C79755D0054E9C6 /* ReminderTableViewController.swift */,
-				EC35A9741C78EE19002CC828 /* Assets.xcassets */,
-				EC35A9761C78EE19002CC828 /* LaunchScreen.storyboard */,
-				EC35A9791C78EE19002CC828 /* Info.plist */,
 				EC2527CE1C796CCB0054E9C6 /* ReminderItem.swift */,
 				EC2527D01C7970460054E9C6 /* ReminderTableViewCell.swift */,
+				EC2527D41C79755D0054E9C6 /* ReminderTableViewController.swift */,
+				EC35A9761C78EE19002CC828 /* LaunchScreen.storyboard */,
+				EC35A9791C78EE19002CC828 /* Info.plist */,
 			);
 			path = ReminderList;
 			sourceTree = "<group>";
