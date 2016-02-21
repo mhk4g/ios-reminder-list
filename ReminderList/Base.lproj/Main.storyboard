@@ -10,16 +10,16 @@
         <scene sceneID="Bfs-ZO-6d8">
             <objects>
                 <tableViewController id="LKj-ft-N1G" customClass="ReminderTableViewController" customModule="ReminderList" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="45" sectionHeaderHeight="28" sectionFooterHeight="28" id="hJz-ht-god">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="52" sectionHeaderHeight="28" sectionFooterHeight="28" id="hJz-ht-god">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderTableViewCell" rowHeight="45" id="XEn-J2-Yak" customClass="ReminderTableViewCell" customModule="ReminderList" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="45"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderTableViewCell" rowHeight="52" id="XEn-J2-Yak" customClass="ReminderTableViewCell" customModule="ReminderList" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XEn-J2-Yak" id="0vQ-iH-FMe">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0X-w1-Z6o">
@@ -37,7 +37,7 @@
                                             <state key="normal" title="✅"/>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQz-E9-lYZ">
-                                            <rect key="frame" x="42" y="22" width="504" height="22.5"/>
+                                            <rect key="frame" x="42" y="28" width="504" height="15.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
