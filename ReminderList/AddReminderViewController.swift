@@ -30,6 +30,9 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
         // Resets default image to clock icon
         currentImageIndex = 0
 
+        // Disables save button by default
+        saveButton.enabled = false
+
         // Assign the view controller as the delegate for both text fields
         itemTitle.delegate = self
         itemDescription.delegate = self
@@ -57,7 +60,21 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
     // Called second: process the input
     func textFieldDidEndEditing(textField: UITextField) {
         NSLog("The user entered input.")
+        validateUserInput()
     }
+
+    // Prevents the user from saving when typing
+    func textFieldDidBeginEditing(textField: UITextField) {
+        saveButton.enabled = false
+    }
+
+
+    func validateUserInput() {
+        // Disable the Save button if the text field is empty.
+        let title = itemTitle.text ?? "", description = itemDescription.text ?? ""
+        saveButton.enabled = !(title.isEmpty || description.isEmpty)
+    }
+
 
     // MARK: Navigation
 
@@ -75,6 +92,11 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
 
 
     // MARK: Actions
+
+    // Dismisses the current view controller when cancel is pressed
+    @IBAction func cancel(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
     @IBAction func getNextIcon(sender: UITapGestureRecognizer) {
 
