@@ -17,8 +17,7 @@ class ReminderTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        loadSampleReminders()
+//        loadSampleReminders()
 
     }
 
