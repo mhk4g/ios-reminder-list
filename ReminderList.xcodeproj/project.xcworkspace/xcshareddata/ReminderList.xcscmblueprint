@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "70A737C26B8D27F8DC0B3B8B766455652778B829",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "70A737C26B8D27F8DC0B3B8B766455652778B829" : 0,
+    "FCBA085811ED384D18697BFAD307C85D1A6A4561" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4AC99FA1-07E1-4AC3-9E30-069DB66A765A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "70A737C26B8D27F8DC0B3B8B766455652778B829" : "ios-reminder-list\/",
+    "FCBA085811ED384D18697BFAD307C85D1A6A4561" : "..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ReminderList",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ReminderList.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mhk4g\/ios-reminder-list",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "70A737C26B8D27F8DC0B3B8B766455652778B829"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/dchaganty\/ListApp.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FCBA085811ED384D18697BFAD307C85D1A6A4561"
+    }
+  ]
+}
