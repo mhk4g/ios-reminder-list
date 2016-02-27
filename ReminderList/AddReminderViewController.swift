@@ -36,6 +36,12 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
         // Assign the view controller as the delegate for both text fields
         itemTitle.delegate = self
         itemDescription.delegate = self
+        if let reminder = newReminderItem {
+            itemTitle.text = reminder.title
+            itemDescription.text   = reminder.description
+            iconView.image = reminder.image
+
+        }
 
         // Load the images for image selector
         loadImagesIntoArray()

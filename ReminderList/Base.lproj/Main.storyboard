@@ -53,6 +53,7 @@
                                     <outlet property="descriptionLabel" destination="OQz-E9-lYZ" id="2XL-wY-aYf"/>
                                     <outlet property="iconImageView" destination="o0X-w1-Z6o" id="bM5-Nf-yOG"/>
                                     <outlet property="titleLabel" destination="eKj-av-Q6I" id="5yW-cd-8ub"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="eJU-Df-fge"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -217,7 +218,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFH-N2-dZE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="349"/>
+            <point key="canvasLocation" x="1093" y="809"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eJU-Df-fge"/>
+    </inferredMetricsTieBreakers>
 </document>
