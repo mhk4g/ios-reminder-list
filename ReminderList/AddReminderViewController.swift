@@ -101,6 +101,13 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
 
     // Dismisses the current view controller when cancel is pressed
     @IBAction func cancel(sender: UIBarButtonItem) {
+        let isPresentingInAddReminderMode = presentingViewController is UINavigationController
+        if isPresentingInAddReminderMode {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+        else {
+            navigationController!.popViewControllerAnimated(true)
+        }
         dismissViewControllerAnimated(true, completion: nil)
     }
 
