@@ -139,6 +139,14 @@
                             </imageView>
                             <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="256" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-kX-b4w" userLabel="ColorPicker" customClass="ColorPicker" customModule="ReminderList" customModuleProvider="target">
                                 <rect key="frame" x="172" y="435" width="256" height="64"/>
+                                <subviews>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-dd-7UL">
+                                        <rect key="frame" x="-172" y="-9" width="600" height="165"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="478308092.21038198">
+                                            <!--2016-02-27 23:21:32 +0000-->
+                                        </date>
+                                    </datePicker>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -182,7 +190,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1929" y="349"/>
+            <point key="canvasLocation" x="1949" y="289"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2XK-5x-Lcc">

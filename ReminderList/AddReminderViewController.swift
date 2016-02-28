@@ -17,6 +17,9 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
     @IBOutlet weak var iconView: UIImageView!
     @IBOutlet weak var colorPicker: ColorPicker!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+
 
     var newReminderItem: ReminderItem?
 
@@ -73,7 +76,18 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
     func textFieldDidBeginEditing(textField: UITextField) {
         saveButton.enabled = false
     }
-
+    
+  //DISPLAYING DATE
+    @IBAction func displayDate() {
+        // First we need to create a new instance of the NSDateFormatter
+        let dateFormatter = NSDateFormatter()
+        // Now we specify the display format, e.g. "27-08-2015
+        dateFormatter.dateFormat = "dd-MM-YYYY"
+        // Now we get the date from the UIDatePicker and convert it to a string
+        let strDate = dateFormatter.stringFromDate(datePicker.date)
+        // Finally we set the text of the label to our new string with the date
+        print(strDate);
+    }
 
     func validateUserInput() {
         // Disable the Save button if the text field is empty.
@@ -96,6 +110,7 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
         }
     }
 
+    
 
     // MARK: Actions
 
