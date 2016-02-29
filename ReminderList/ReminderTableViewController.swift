@@ -21,6 +21,7 @@ class ReminderTableViewController: UITableViewController {
 
     }
 
+    /*
     func loadSampleReminders() {
         let icon1 = UIImage(named: "alarm-clock")!
         let item1 = ReminderItem(image: icon1, color: UIColor.redColor(), title: "Buy a clock", description: "Go to the store and buy yourself a damn clock")!
@@ -35,6 +36,7 @@ class ReminderTableViewController: UITableViewController {
         reminders.append(item2)
         reminders.append(item3)
     }
+*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
