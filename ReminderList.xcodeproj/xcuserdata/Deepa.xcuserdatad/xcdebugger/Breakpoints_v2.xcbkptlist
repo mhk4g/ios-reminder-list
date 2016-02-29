@@ -2,4 +2,99 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReminderList/AddReminderViewController.swift"
+            timestampString = "478462421.316534"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "AddReminderViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReminderList.AddReminderViewController.newReminderItem.getter : Swift.Optional&lt;ReminderList.ReminderItem&gt;"
+                  moduleName = "ReminderList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Deepa/Documents/fourth_year/cs%204720/ios/ios-reminder-list/ReminderList/AddReminderViewController.swift"
+                  timestampString = "478462421.540149"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReminderList.AddReminderViewController.newReminderItem.setter : Swift.Optional&lt;ReminderList.ReminderItem&gt;"
+                  moduleName = "ReminderList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Deepa/Documents/fourth_year/cs%204720/ios/ios-reminder-list/ReminderList/AddReminderViewController.swift"
+                  timestampString = "478462421.542924"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReminderList.AddReminderViewController.newReminderItem.materializeForSet : Swift.Optional&lt;ReminderList.ReminderItem&gt;"
+                  moduleName = "ReminderList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Deepa/Documents/fourth_year/cs%204720/ios/ios-reminder-list/ReminderList/AddReminderViewController.swift"
+                  timestampString = "478462421.543125"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReminderList.AddReminderViewController.init (ReminderList.AddReminderViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; ReminderList.AddReminderViewController"
+                  moduleName = "ReminderList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Deepa/Documents/fourth_year/cs%204720/ios/ios-reminder-list/ReminderList/AddReminderViewController.swift"
+                  timestampString = "478462421.543319"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "420">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ReminderList.AddReminderViewController.init (ReminderList.AddReminderViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;ReminderList.AddReminderViewController&gt;"
+                  moduleName = "ReminderList"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Deepa/Documents/fourth_year/cs%204720/ios/ios-reminder-list/ReminderList/AddReminderViewController.swift"
+                  timestampString = "478462421.546616"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "356">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -45,9 +45,11 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
             iconView.image = reminder.image
 
             let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "dd-MM-YYYY"
-            let date2 = dateFormatter.dateFromString(reminder.date);
-            datePicker.date = date2!
+            dateFormatter.timeZone = NSTimeZone(name: "EST")
+            dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+            datePicker.date = dateFormatter.dateFromString(reminder.date)!
+            print(reminder.date)
+            print(datePicker.date)
 
         }
 
@@ -100,10 +102,10 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
             let icon = iconView.image ?? UIImage(named: "alarm-clock")!
             
             let dateFormatter = NSDateFormatter()
-            dateFormatter.dateFormat = "dd-MM-YYYY"
-            let strDate = dateFormatter.stringFromDate(datePicker.date) ?? "01-01-2016"
-            print(strDate)
-            newReminderItem = ReminderItem(image: icon, color: color, title: title, description: description, date: strDate)
+            dateFormatter.timeZone = NSTimeZone(name: "EST")
+            dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+            let date = dateFormatter.stringFromDate(datePicker.date) ?? "01-01-2016 17:05:05"
+            newReminderItem = ReminderItem(image: icon, color: color, title: title, description: description, date: date)
 
         }
     }
