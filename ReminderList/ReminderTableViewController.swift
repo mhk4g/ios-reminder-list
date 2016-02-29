@@ -17,6 +17,7 @@ class ReminderTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
 //        loadSampleReminders()
 
     }
@@ -74,7 +75,7 @@ class ReminderTableViewController: UITableViewController {
 
         // If we just arrived at this VC from the "AddReminderViewController" and it has a current value set to its newReminderItem...
         if let sourceViewController = sender.sourceViewController as? AddReminderViewController, reminder = sourceViewController.newReminderItem {
-            
+
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
                 reminders[selectedIndexPath.row] = reminder
                 tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
@@ -85,7 +86,15 @@ class ReminderTableViewController: UITableViewController {
                 reminders.append(reminder)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
-            
+
+            reminders.sortInPlace({ $0.title.localizedCaseInsensitiveCompare($1.title) == NSComparisonResult.OrderedAscending })
+
+            self.tableView.reloadData()
+
+            for a in reminders {
+                NSLog(a.title)
+            }
+
             /*
             // Get ready to add the new reminder to array
             let newIndexPath = NSIndexPath(forRow: reminders.count, inSection: 0)
