@@ -38,7 +38,7 @@ class ColorPicker: UIView {
 
         // Layout each button's location according to its index
         for (index, button) in colorButtons.enumerate() {
-            buttonFrame.origin.x = CGFloat(index * (32) + 8)
+            buttonFrame.origin.x = CGFloat(index * (28) + 8)
             button.frame = buttonFrame
         }
     }

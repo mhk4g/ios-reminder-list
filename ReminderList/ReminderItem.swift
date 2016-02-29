@@ -16,14 +16,15 @@ public class ReminderItem {
     let title: String
     let description: String
     var active: Bool = true
+    let date: String
 
-    init?(image: UIImage, color: UIColor, title: String, description: String) {
+    init?(image: UIImage, color: UIColor, title: String, description: String, date: String) {
 
         self.image = image
         self.color = color
         self.title = title
         self.description = description
-
+        self.date = date
         // Fail if either string is empty
         if self.title.isEmpty || self.description.isEmpty {
             return nil

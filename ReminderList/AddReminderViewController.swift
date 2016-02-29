@@ -44,6 +44,13 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
             itemDescription.text   = reminder.description
             iconView.image = reminder.image
 
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.timeZone = NSTimeZone(name: "EST")
+            dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+            datePicker.date = dateFormatter.dateFromString(reminder.date)!
+            print(reminder.date)
+            print(datePicker.date)
+
         }
 
         // Load the images for image selector
@@ -77,17 +84,6 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
         saveButton.enabled = false
     }
     
-  //DISPLAYING DATE
-    @IBAction func displayDate() {
-        // First we need to create a new instance of the NSDateFormatter
-        let dateFormatter = NSDateFormatter()
-        // Now we specify the display format, e.g. "27-08-2015
-        dateFormatter.dateFormat = "dd-MM-YYYY"
-        // Now we get the date from the UIDatePicker and convert it to a string
-        let strDate = dateFormatter.stringFromDate(datePicker.date)
-        // Finally we set the text of the label to our new string with the date
-        print(strDate);
-    }
 
     func validateUserInput() {
         // Disable the Save button if the text field is empty.
@@ -104,8 +100,12 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
             let description = itemDescription.text ?? "Whatever it is, you'd better do it"
             let color = iconView.tintColor ?? UIColor.grayColor()
             let icon = iconView.image ?? UIImage(named: "alarm-clock")!
-
-            newReminderItem = ReminderItem(image: icon, color: color, title: title, description: description)
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.timeZone = NSTimeZone(name: "EST")
+            dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
+            let date = dateFormatter.stringFromDate(datePicker.date) ?? "01-01-2016 17:05:05"
+            newReminderItem = ReminderItem(image: icon, color: color, title: title, description: description, date: date)
 
         }
     }
