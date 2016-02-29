@@ -17,6 +17,7 @@
 		EC35A9781C78EE19002CC828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC35A9761C78EE19002CC828 /* LaunchScreen.storyboard */; };
 		EC35A9831C78EE19002CC828 /* ReminderListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC35A9821C78EE19002CC828 /* ReminderListTests.swift */; };
 		EC7B01321C791AB700336FF3 /* ColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC7B01311C791AB700336FF3 /* ColorPicker.swift */; };
+		ECDF54C71C850DD000381CDE /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDF54C61C850DD000381CDE /* NotificationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		EC35A9821C78EE19002CC828 /* ReminderListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListTests.swift; sourceTree = "<group>"; };
 		EC35A9841C78EE19002CC828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC7B01311C791AB700336FF3 /* ColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPicker.swift; sourceTree = "<group>"; };
+		ECDF54C61C850DD000381CDE /* NotificationHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				EC2527D41C79755D0054E9C6 /* ReminderTableViewController.swift */,
 				EC35A9761C78EE19002CC828 /* LaunchScreen.storyboard */,
 				EC35A9791C78EE19002CC828 /* Info.plist */,
+				ECDF54C61C850DD000381CDE /* NotificationHandler.swift */,
 			);
 			path = ReminderList;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				EC35A9701C78EE19002CC828 /* AddReminderViewController.swift in Sources */,
 				EC35A96E1C78EE19002CC828 /* AppDelegate.swift in Sources */,
+				ECDF54C71C850DD000381CDE /* NotificationHandler.swift in Sources */,
 				EC2527CF1C796CCB0054E9C6 /* ReminderItem.swift in Sources */,
 				EC7B01321C791AB700336FF3 /* ColorPicker.swift in Sources */,
 				EC2527D21C7970460054E9C6 /* ReminderTableViewCell.swift in Sources */,
