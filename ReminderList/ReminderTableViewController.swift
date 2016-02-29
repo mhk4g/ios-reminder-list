@@ -17,27 +17,7 @@ class ReminderTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-//        loadSampleReminders()
-
     }
-
-    /*
-    func loadSampleReminders() {
-        let icon1 = UIImage(named: "alarm-clock")!
-        let item1 = ReminderItem(image: icon1, color: UIColor.redColor(), title: "Buy a clock", description: "Go to the store and buy yourself a damn clock")!
-
-        let icon2 = UIImage(named: "book")!
-        let item2 = ReminderItem(image: icon2, color: UIColor.orangeColor(), title: "Read book", description: "War and Peace isn't going to read itself")!
-
-        let icon3 = UIImage(named: "group")!
-        let item3: ReminderItem = ReminderItem(image: icon3, color: UIColor.magentaColor(), title: "Make a friend", description: "Too much computers. Go make some friends for chrissake")!
-
-        reminders.append(item1)
-        reminders.append(item2)
-        reminders.append(item3)
-    }
-*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -87,8 +67,6 @@ class ReminderTableViewController: UITableViewController {
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
 
-//            reminders.sortInPlace({ $0.title.localizedCaseInsensitiveCompare($1.title) == NSComparisonResult.OrderedAscending })
-
             reminders.sortInPlace({ $0.dateActual.compare($1.dateActual) == NSComparisonResult.OrderedAscending })
 
             self.tableView.reloadData()
@@ -97,17 +75,6 @@ class ReminderTableViewController: UITableViewController {
                 NSLog(a.title)
             }
 
-            /*
-            // Get ready to add the new reminder to array
-            let newIndexPath = NSIndexPath(forRow: reminders.count, inSection: 0)
-
-            // Add the new reminder to the array
-            reminders.append(reminder)
-
-            // Add the new row at the newly calculated index
-            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
-
-            */
         }
 
     }
