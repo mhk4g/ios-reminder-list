@@ -29,7 +29,7 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.automaticallyAdjustsScrollViewInsets = false
         // Resets default image to clock icon
         currentImageIndex = 0
 

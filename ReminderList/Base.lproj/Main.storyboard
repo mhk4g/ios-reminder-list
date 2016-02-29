@@ -82,50 +82,57 @@
                                         <rect key="frame" x="8" y="0.0" width="544" height="572"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uc-tYa" userLabel="Stack view">
-                                                <rect key="frame" x="8" y="88" width="560" height="496"/>
+                                                <rect key="frame" x="8" y="88" width="560" height="514"/>
                                                 <subviews>
+                                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eeC-IA-aEv" userLabel="Spacing">
+                                                        <rect key="frame" x="0.0" y="0.0" width="540" height="25"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="Kb3-an-dTs"/>
+                                                        </constraints>
+                                                    </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-cg-3uU" userLabel="Title label">
-                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="17"/>
+                                                        <rect key="frame" x="0.0" y="33" width="30" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your reminder title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96C-bh-0Bv" userLabel="Title text field">
-                                                        <rect key="frame" x="0.0" y="25" width="560" height="30"/>
+                                                        <rect key="frame" x="0.0" y="58" width="560" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZV-Zk-lHP" userLabel="Description label">
-                                                        <rect key="frame" x="0.0" y="63" width="78" height="17"/>
+                                                        <rect key="frame" x="0.0" y="96" width="78" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T33-QM-7Dl" userLabel="Description text field">
-                                                        <rect key="frame" x="0.0" y="88" width="560" height="30"/>
+                                                        <rect key="frame" x="0.0" y="121" width="560" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOk-Wv-JnI" userLabel="Date and time label">
-                                                        <rect key="frame" x="0.0" y="126" width="34" height="17"/>
+                                                        <rect key="frame" x="0.0" y="159" width="34" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-dd-7UL">
-                                                        <rect key="frame" x="0.0" y="151" width="560" height="216"/>
+                                                        <rect key="frame" x="0.0" y="184" width="560" height="216"/>
                                                         <date key="date" timeIntervalSinceReferenceDate="478308092.21038198">
                                                             <!--2016-02-27 23:21:32 +0000-->
                                                         </date>
                                                     </datePicker>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jo-0y-cw7" userLabel="Icon label">
-                                                        <rect key="frame" x="0.0" y="375" width="29" height="17"/>
+                                                        <rect key="frame" x="0.0" y="408" width="29" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Qz-97-B0F" userLabel="Icon Picker stack">
-                                                        <rect key="frame" x="0.0" y="400" width="314" height="48"/>
+                                                        <rect key="frame" x="0.0" y="433" width="314" height="48"/>
                                                         <subviews>
                                                             <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-i9-eFH">
                                                                 <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
@@ -149,10 +156,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ClB-AT-eeH" userLabel="Spacing">
-                                                        <rect key="frame" x="0.0" y="456" width="540" height="40"/>
+                                                        <rect key="frame" x="0.0" y="489" width="540" height="25"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="40" id="2cu-MS-mh8"/>
+                                                            <constraint firstAttribute="height" constant="25" id="2cu-MS-mh8"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
