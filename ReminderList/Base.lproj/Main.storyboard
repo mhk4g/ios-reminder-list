@@ -86,59 +86,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2oc-Lh-u2I">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oc-Lh-u2I">
                                 <rect key="frame" x="20" y="72" width="560" height="508"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4V-t1-RzD" userLabel="Content view">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c4V-t1-RzD" userLabel="Content view">
                                         <rect key="frame" x="8" y="8" width="544" height="492"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uc-tYa" userLabel="Stack view">
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uc-tYa" userLabel="Stack view">
                                                 <rect key="frame" x="8" y="8" width="600" height="448"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-cg-3uU">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-cg-3uU">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your reminder title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96C-bh-0Bv">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your reminder title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96C-bh-0Bv">
                                                         <rect key="frame" x="0.0" y="25" width="560" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZV-Zk-lHP">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZV-Zk-lHP">
                                                         <rect key="frame" x="0.0" y="63" width="78" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T33-QM-7Dl">
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="560" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T33-QM-7Dl">
                                                         <rect key="frame" x="0.0" y="88" width="560" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOk-Wv-JnI" userLabel="Date &amp; time">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOk-Wv-JnI" userLabel="Date &amp; time">
                                                         <rect key="frame" x="0.0" y="126" width="34" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-dd-7UL">
+                                                    <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-dd-7UL">
                                                         <rect key="frame" x="0.0" y="151" width="320" height="216"/>
                                                         <date key="date" timeIntervalSinceReferenceDate="478308092.21038198">
                                                             <!--2016-02-27 23:21:32 +0000-->
                                                         </date>
                                                     </datePicker>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jo-0y-cw7" userLabel="Date &amp; time">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jo-0y-cw7" userLabel="Date &amp; time">
                                                         <rect key="frame" x="0.0" y="375" width="29" height="17"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Qz-97-B0F" userLabel="Icon Picker stack">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Qz-97-B0F" userLabel="Icon Picker stack">
                                                         <rect key="frame" x="0.0" y="400" width="314" height="48"/>
                                                         <subviews>
-                                                            <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-i9-eFH">
+                                                            <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-i9-eFH">
                                                                 <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
                                                                 <color key="tintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <gestureRecognizers/>
@@ -150,7 +150,7 @@
                                                                     <outletCollection property="gestureRecognizers" destination="bPa-qj-9yi" appends="YES" id="Dfl-ML-IbZ"/>
                                                                 </connections>
                                                             </imageView>
-                                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="256" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-kX-b4w" userLabel="ColorPicker" customClass="ColorPicker" customModule="ReminderList" customModuleProvider="target">
+                                                            <view contentMode="scaleToFill" ambiguous="YES" placeholderIntrinsicWidth="256" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-kX-b4w" userLabel="ColorPicker" customClass="ColorPicker" customModule="ReminderList" customModuleProvider="target">
                                                                 <rect key="frame" x="58" y="0.0" width="256" height="48"/>
                                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             </view>
@@ -178,10 +178,10 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="c4V-t1-RzD" firstAttribute="bottom" secondItem="2oc-Lh-u2I" secondAttribute="bottom" constant="-44" id="0mN-jK-L7d"/>
-                                    <constraint firstItem="c4V-t1-RzD" firstAttribute="trailing" secondItem="2oc-Lh-u2I" secondAttribute="trailing" constant="-48" id="GS0-eX-8vR"/>
-                                    <constraint firstItem="c4V-t1-RzD" firstAttribute="leading" secondItem="2oc-Lh-u2I" secondAttribute="leading" constant="40" id="PwN-pa-u7r"/>
-                                    <constraint firstItem="c4V-t1-RzD" firstAttribute="top" secondItem="2oc-Lh-u2I" secondAttribute="top" constant="47" id="jgB-QI-O6Z"/>
+                                    <constraint firstItem="c4V-t1-RzD" firstAttribute="bottom" secondItem="2oc-Lh-u2I" secondAttribute="bottom" id="0mN-jK-L7d"/>
+                                    <constraint firstItem="c4V-t1-RzD" firstAttribute="trailing" secondItem="2oc-Lh-u2I" secondAttribute="trailing" id="GS0-eX-8vR"/>
+                                    <constraint firstItem="c4V-t1-RzD" firstAttribute="leading" secondItem="2oc-Lh-u2I" secondAttribute="leading" id="PwN-pa-u7r"/>
+                                    <constraint firstItem="c4V-t1-RzD" firstAttribute="top" secondItem="2oc-Lh-u2I" secondAttribute="top" id="jgB-QI-O6Z"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -189,9 +189,8 @@
                         <constraints>
                             <constraint firstItem="c4V-t1-RzD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="I8z-wG-lh9"/>
                             <constraint firstItem="2oc-Lh-u2I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="MF2-gD-HZm"/>
+                            <constraint firstItem="2oc-Lh-u2I" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="WrP-ta-c8q"/>
                             <constraint firstItem="2oc-Lh-u2I" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="i2u-Km-Hqb"/>
-                            <constraint firstItem="2oc-Lh-u2I" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oip-k2-WnF"/>
-                            <constraint firstItem="2oc-Lh-u2I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uz0-Ti-tTA"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Reminder" id="awT-dU-S5G">
