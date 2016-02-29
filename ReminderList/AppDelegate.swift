@@ -51,13 +51,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "Dismiss").show()
     }
 
-    // Handling a user's response to the alart
+    // Handling a user's response to the alert
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
         // Point for handling the local notification Action. Provided alongside creating the notification.
         if identifier == "Dismiss" {
-            UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "OK").show()
+            UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "Dismiss").show()
         } else if identifier == "Postpone" {
-            notification.fireDate = NSDate().dateByAddingTimeInterval(60*5)
+            notification.fireDate = NSDate().dateByAddingTimeInterval(60*5) //FIXME()
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
         }
         completionHandler()
