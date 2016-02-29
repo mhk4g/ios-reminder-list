@@ -14,8 +14,7 @@ class ReminderTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
-    @IBOutlet weak var checkButton: UIButton!
-  
+    @IBOutlet weak var Datestring: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

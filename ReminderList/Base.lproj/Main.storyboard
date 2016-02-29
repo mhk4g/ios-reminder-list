@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--My Reminders-->
@@ -21,24 +22,52 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0X-w1-Z6o">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0X-w1-Z6o">
                                             <rect key="frame" x="8" y="10" width="26" height="26"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="26" id="I5i-Tf-e92"/>
+                                                <constraint firstAttribute="height" constant="26" id="JaK-DG-pOS"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKj-av-Q6I">
-                                            <rect key="frame" x="42" y="7" width="242" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="200" ambiguous="YES" misplaced="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="eKj-av-Q6I">
+                                            <rect key="frame" x="42" y="7" width="163" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" priority="800" constant="150" id="NH0-Sj-Zes"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQz-E9-lYZ">
-                                            <rect key="frame" x="42" y="28" width="242" height="16"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="200" ambiguous="YES" misplaced="YES" text="Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQz-E9-lYZ">
+                                            <rect key="frame" x="42" y="28" width="163" height="16"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" ambiguous="YES" misplaced="YES" text="Datestring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEZ-dx-zfQ">
+                                            <rect key="frame" x="435" y="15" width="151" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" horizontalCompressionResistancePriority="300" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ES8-sa-0hK">
+                                            <rect key="frame" x="292" y="4" width="68" height="44"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FEZ-dx-zfQ" firstAttribute="leading" secondItem="eKj-av-Q6I" secondAttribute="trailing" constant="50" id="1iE-em-Reu"/>
+                                        <constraint firstItem="eKj-av-Q6I" firstAttribute="leading" secondItem="o0X-w1-Z6o" secondAttribute="trailing" constant="8" id="43X-dx-AOU"/>
+                                        <constraint firstItem="ES8-sa-0hK" firstAttribute="leading" secondItem="OQz-E9-lYZ" secondAttribute="trailing" constant="87" id="5AC-dq-Lvp"/>
+                                        <constraint firstItem="ES8-sa-0hK" firstAttribute="leading" secondItem="eKj-av-Q6I" secondAttribute="trailing" constant="87" id="Fev-6b-raC"/>
+                                        <constraint firstItem="FEZ-dx-zfQ" firstAttribute="leading" secondItem="ES8-sa-0hK" secondAttribute="trailing" constant="101" id="dGe-83-SVT"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="o0X-w1-Z6o" secondAttribute="leading" id="jmA-w7-eOm"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="FEZ-dx-zfQ" secondAttribute="trailing" id="tgD-gL-MUQ"/>
+                                        <constraint firstItem="OQz-E9-lYZ" firstAttribute="leading" secondItem="o0X-w1-Z6o" secondAttribute="trailing" constant="8" id="zlT-bu-8kG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="Datestring" destination="FEZ-dx-zfQ" id="Pje-Hf-CbN"/>
                                     <outlet property="descriptionLabel" destination="OQz-E9-lYZ" id="2XL-wY-aYf"/>
                                     <outlet property="iconImageView" destination="o0X-w1-Z6o" id="bM5-Nf-yOG"/>
                                     <outlet property="titleLabel" destination="eKj-av-Q6I" id="5yW-cd-8ub"/>
