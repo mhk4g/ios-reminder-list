@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0bA-HX-WSV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0bA-HX-WSV">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="52"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XEn-J2-Yak" id="0vQ-iH-FMe">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="51"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="51.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o0X-w1-Z6o">
@@ -86,8 +86,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uc-tYa">
-                                <rect key="frame" x="20" y="94" width="560" height="143"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nUY-Uc-tYa" userLabel="Main stack view">
+                                <rect key="frame" x="20" y="94" width="560" height="448"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWL-cg-3uU">
                                         <rect key="frame" x="0.0" y="0.0" width="30" height="17"/>
@@ -111,55 +111,70 @@
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOk-Wv-JnI">
-                                        <rect key="frame" x="0.0" y="126" width="29" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOk-Wv-JnI" userLabel="Date &amp; time">
+                                        <rect key="frame" x="0.0" y="126" width="33.5" height="17"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="T33-QM-7Dl" secondAttribute="trailing" id="19Y-mE-3gc"/>
-                                    <constraint firstItem="T33-QM-7Dl" firstAttribute="leading" secondItem="nUY-Uc-tYa" secondAttribute="leading" id="SFg-O3-wU7"/>
-                                    <constraint firstAttribute="trailing" secondItem="96C-bh-0Bv" secondAttribute="trailing" id="kgD-Cz-YJY"/>
-                                    <constraint firstItem="96C-bh-0Bv" firstAttribute="leading" secondItem="nUY-Uc-tYa" secondAttribute="leading" id="zxI-uL-gDn"/>
-                                </constraints>
-                            </stackView>
-                            <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-i9-eFH">
-                                <rect key="frame" x="236" y="291" width="128" height="128"/>
-                                <color key="tintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="128" id="8SL-dn-pIL"/>
-                                    <constraint firstAttribute="width" constant="128" id="SRT-cr-aAd"/>
-                                </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="bPa-qj-9yi" appends="YES" id="Dfl-ML-IbZ"/>
-                                </connections>
-                            </imageView>
-                            <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="256" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-kX-b4w" userLabel="ColorPicker" customClass="ColorPicker" customModule="ReminderList" customModuleProvider="target">
-                                <rect key="frame" x="172" y="435" width="256" height="64"/>
-                                <subviews>
-                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-dd-7UL">
-                                        <rect key="frame" x="-172" y="-9" width="600" height="165"/>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="bnC-dd-7UL">
+                                        <rect key="frame" x="0.0" y="151" width="560" height="216"/>
                                         <date key="date" timeIntervalSinceReferenceDate="478308092.21038198">
                                             <!--2016-02-27 23:21:32 +0000-->
                                         </date>
                                     </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Icon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Jo-0y-cw7" userLabel="Date &amp; time">
+                                        <rect key="frame" x="0.0" y="375" width="29" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Qz-97-B0F" userLabel="Icon Picker stack">
+                                        <rect key="frame" x="0.0" y="400" width="560" height="48"/>
+                                        <subviews>
+                                            <imageView alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="128" placeholderIntrinsicHeight="128" translatesAutoresizingMaskIntoConstraints="NO" id="Utm-i9-eFH">
+                                                <rect key="frame" x="0.0" y="0.0" width="48" height="48"/>
+                                                <color key="tintColor" red="0.70196080207824707" green="0.70196080207824707" blue="0.70196080207824707" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="48" id="8SL-dn-pIL"/>
+                                                    <constraint firstAttribute="width" constant="48" id="SRT-cr-aAd"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="bPa-qj-9yi" appends="YES" id="Dfl-ML-IbZ"/>
+                                                </connections>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="256" placeholderIntrinsicHeight="64" translatesAutoresizingMaskIntoConstraints="NO" id="Rbr-kX-b4w" userLabel="ColorPicker" customClass="ColorPicker" customModule="ReminderList" customModuleProvider="target">
+                                                <rect key="frame" x="58" y="0.0" width="502" height="48"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Utm-i9-eFH" firstAttribute="centerY" secondItem="9Qz-97-B0F" secondAttribute="centerY" id="SF1-s8-1ae"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="SF1-s8-1ae"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="T33-QM-7Dl" secondAttribute="trailing" id="19Y-mE-3gc"/>
+                                    <constraint firstItem="bnC-dd-7UL" firstAttribute="centerX" secondItem="nUY-Uc-tYa" secondAttribute="centerX" id="1dV-js-vhG"/>
+                                    <constraint firstItem="T33-QM-7Dl" firstAttribute="leading" secondItem="nUY-Uc-tYa" secondAttribute="leading" id="SFg-O3-wU7"/>
+                                    <constraint firstAttribute="trailing" secondItem="96C-bh-0Bv" secondAttribute="trailing" id="kgD-Cz-YJY"/>
+                                    <constraint firstItem="9Qz-97-B0F" firstAttribute="centerX" secondItem="nUY-Uc-tYa" secondAttribute="centerX" id="zfV-i7-Dwe"/>
+                                    <constraint firstItem="96C-bh-0Bv" firstAttribute="leading" secondItem="nUY-Uc-tYa" secondAttribute="leading" id="zxI-uL-gDn"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nUY-Uc-tYa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="1J1-dx-lyI"/>
-                            <constraint firstItem="Utm-i9-eFH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Zx-ms-1Tr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nUY-Uc-tYa" secondAttribute="trailing" id="5nw-Nv-RsU"/>
                             <constraint firstItem="nUY-Uc-tYa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6sG-rU-vEz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nUY-Uc-tYa" secondAttribute="trailing" id="8Y3-QX-LH9"/>
-                            <constraint firstItem="Rbr-kX-b4w" firstAttribute="top" secondItem="Utm-i9-eFH" secondAttribute="bottom" constant="32" id="AMY-Id-HjZ"/>
-                            <constraint firstItem="Rbr-kX-b4w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qt4-a7-WQt"/>
-                            <constraint firstItem="Utm-i9-eFH" firstAttribute="top" secondItem="nUY-Uc-tYa" secondAttribute="bottom" constant="50" id="aOr-VJ-6Az"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Reminder" id="awT-dU-S5G">
@@ -176,6 +191,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="colorPicker" destination="Rbr-kX-b4w" id="mbh-H0-N9X"/>
+                        <outlet property="datePicker" destination="bnC-dd-7UL" id="4al-EY-n1w"/>
                         <outlet property="iconView" destination="Utm-i9-eFH" id="y6L-wj-k7s"/>
                         <outlet property="itemDescription" destination="T33-QM-7Dl" id="Vxd-at-wlS"/>
                         <outlet property="itemTitle" destination="96C-bh-0Bv" id="Idm-wY-qIO"/>
