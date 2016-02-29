@@ -105,8 +105,7 @@ class AddReminderViewController: UIViewController, UITextFieldDelegate, UINaviga
             dateFormatter.timeZone = NSTimeZone(name: "EST")
             dateFormatter.dateFormat = "dd-MM-yyyy HH:mm"
             let date = dateFormatter.stringFromDate(datePicker.date) ?? "01-01-2016 17:05:05"
-            newReminderItem = ReminderItem(image: icon, color: color, title: title, description: description, date: date)
-
+            newReminderItem = ReminderItem(image: icon, color: color, title: title, description: description, date: date, dateActual: datePicker.date)
         }
     }
 

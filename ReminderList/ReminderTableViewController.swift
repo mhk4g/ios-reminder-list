@@ -87,7 +87,9 @@ class ReminderTableViewController: UITableViewController {
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
 
-            reminders.sortInPlace({ $0.title.localizedCaseInsensitiveCompare($1.title) == NSComparisonResult.OrderedAscending })
+//            reminders.sortInPlace({ $0.title.localizedCaseInsensitiveCompare($1.title) == NSComparisonResult.OrderedAscending })
+
+            reminders.sortInPlace({ $0.dateActual.compare($1.dateActual) == NSComparisonResult.OrderedAscending })
 
             self.tableView.reloadData()
 
