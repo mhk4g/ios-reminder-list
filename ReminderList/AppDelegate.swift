@@ -66,8 +66,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             // Set new NSDate in the reminder item
             let currentReminder = reminderVC.reminders[correctIndex]
-            currentReminder.dateActual = currentReminder.dateActual.dateByAddingTimeInterval(60)
+            currentReminder.dateActual = currentReminder.dateActual.dateByAddingTimeInterval(60*60)
             reminderVC.reminders[correctIndex] = currentReminder
+        
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.timeZone = NSTimeZone(name: "EST")
+            dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+            let dateString = dateFormatter.stringFromDate(currentReminder.dateActual) ?? "01-01-2016 17:05:05"
+            currentReminder.date = dateString
 
             // Register a new notification for the updated time
             scheduleLocalNotification(currentReminder.title, description: currentReminder.description, reminderDate: currentReminder.dateActual)
@@ -87,52 +94,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.rootViewController?.presentViewController(alert, animated: true, completion: nil)
     }
 
-    // Handling a user's response to the alert
-    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
-        // Point for handling the local notification Action. Provided alongside creating the notification.
-        if identifier == "Alarm" {
-            UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "Dismiss").show()
-        } else if identifier == "Postpone" {
-            NSLog("POSTPONY")
-            //GUHHH
-            UIApplication.sharedApplication().scheduleLocalNotification(notification)
-        }
-        completionHandler() // Postpone the thing
-    }
-
-    func getDismissAction() -> UIMutableUserNotificationAction {
-        let reminderActionDismiss = UIMutableUserNotificationAction()
-        reminderActionDismiss.identifier = "Dismiss"
-        reminderActionDismiss.title = "Dismiss"
-        reminderActionDismiss.activationMode = UIUserNotificationActivationMode.Background
-        reminderActionDismiss.destructive = false
-        reminderActionDismiss.authenticationRequired = false
-        return reminderActionDismiss
-    }
-
-    func getPostponeAction() -> UIMutableUserNotificationAction {
-        // Postpone the alarm by one hour
-        let reminderActionPostpone = UIMutableUserNotificationAction()
-        reminderActionPostpone.identifier = "Postpone"
-        reminderActionPostpone.title = "Postpone"
-        reminderActionPostpone.activationMode = UIUserNotificationActivationMode.Background
-        reminderActionPostpone.destructive = false
-        reminderActionPostpone.authenticationRequired = false
-        return reminderActionPostpone
-    }
-
     func registerForLocalNotifications() {
-
-        // Add above to category
-        let reminderCategory = UIMutableUserNotificationCategory()
-        reminderCategory.identifier = "reminderCategory"
-        reminderCategory.setActions([getDismissAction(), getPostponeAction()], forContext: UIUserNotificationActionContext.Default)
-        reminderCategory.setActions([getDismissAction(), getPostponeAction()], forContext: UIUserNotificationActionContext.Minimal)
-
-        let notificationSettings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: Set(arrayLiteral: reminderCategory))
+        let notificationSettings = UIUserNotificationSettings(forTypes: UIUserNotificationType.Alert, categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
     }
-
 
 }
 
