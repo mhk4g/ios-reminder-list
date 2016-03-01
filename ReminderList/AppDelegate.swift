@@ -70,7 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             reminderVC.reminders[correctIndex] = currentReminder
 
             // Register a new notification for the updated time
-            
+            scheduleLocalNotification(currentReminder.title, description: currentReminder.description, reminderDate: currentReminder.dateActual)
 
             // Update the data of the TableViewController
             reminderVC.tableView.reloadData()
