@@ -16,8 +16,8 @@ public class ReminderItem {
     let title: String
     let description: String
     var active: Bool = true
-    let date: String
-    let dateActual: NSDate
+    var date: String
+    var dateActual: NSDate
 
     init?(image: UIImage, color: UIColor, title: String, description: String, date: String, dateActual: NSDate) {
 
