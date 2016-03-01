@@ -67,8 +67,11 @@ class ReminderTableViewController: UITableViewController {
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
 
+            let timeInterval = floor(reminder.dateActual.timeIntervalSinceReferenceDate / 60.0) * 60.0
+            let newDate = NSDate(timeIntervalSinceReferenceDate: timeInterval)
+
             // Register for local notification
-            scheduleLocalNotification(reminder.title, description: reminder.description, reminderDate: reminder.dateActual)
+            scheduleLocalNotification(reminder.title, description: reminder.description, reminderDate: newDate)
 
             reminders.sortInPlace({ $0.dateActual.compare($1.dateActual) == NSComparisonResult.OrderedAscending })
 
