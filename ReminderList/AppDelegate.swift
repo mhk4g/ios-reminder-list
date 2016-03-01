@@ -64,14 +64,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
 
-            NSLog("CORRECT INDEX: \(correctIndex)")
-
             // Set new NSDate in the reminder item
+            let currentReminder = reminderVC.reminders[correctIndex]
+            currentReminder.dateActual = currentReminder.dateActual.dateByAddingTimeInterval(60)
+            reminderVC.reminders[correctIndex] = currentReminder
 
             // Register a new notification for the updated time
+            
 
             // Update the data of the TableViewController
-
+            reminderVC.tableView.reloadData()
         }
 
         let dismissAction = UIAlertAction(title: "Dismiss", style: .Default) {
