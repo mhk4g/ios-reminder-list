@@ -16,9 +16,9 @@ func scheduleLocalNotification(title: String, description: String, reminderDate:
 
     localNotification.alertTitle = title
     localNotification.alertBody = description
-    localNotification.alertAction = "????" //<- CHANGE
+    localNotification.alertAction = "Alarm"
     localNotification.fireDate = reminderDate
     localNotification.timeZone = NSTimeZone(name: "EST")
-    localNotification.category = "notificationCategory"
+    localNotification.category = "reminderCategory"
     UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
 }

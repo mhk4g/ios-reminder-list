@@ -47,6 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Handle a local notification
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
 
+        NSLog("\n\nAAAAAAAHHHHHHHHHHHHH!\n\n")
+
         // Show the alert
         UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "Dismiss").show()
     }
@@ -54,7 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Handling a user's response to the alert
     func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
         // Point for handling the local notification Action. Provided alongside creating the notification.
-        if identifier == "Dismiss" {
+        if identifier == "Alarm" {
             UIAlertView(title: notification.alertTitle, message: notification.alertBody, delegate: nil, cancelButtonTitle: "Dismiss").show()
         } else if identifier == "Postpone" {
             notification.fireDate = NSDate().dateByAddingTimeInterval(60*5) //FIXME()
